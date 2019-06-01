@@ -1,0 +1,91 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmart.projects.storline.activities.fragments.CartFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Productos a Comprar"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_alignParentTop="true"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCart"
+            android:layout_above="@+id/totales">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/totales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/input_label_vertical_spacing"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="Total Items" />
+
+                <TextView
+                    android:id="@+id/tvItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="Total" />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:text="$0.00" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnConfirmShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4dd0e1"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:drawableTint="@color/cardview_dark_background"
+                android:text="Comprar"
+                android:layout_margin="@dimen/text_margin" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
